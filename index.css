@@ -1,0 +1,837 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #E6E6FA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 2;
+    border-bottom: 1px solid black;
+}
+
+.portfolio {
+    font-size: 30px;
+    text-decoration: none;
+}
+
+/* .links {
+    display: flex;
+    gap: 20px;
+} */
+
+.navcontaints {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    /* Set your desired text color */
+}
+
+.gridcontainer {
+    width: 100%;
+    height: 100%;
+    /* background-color: #ffffff; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
+    grid-template-rows: 1;
+    gap: 10px;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.item {
+    margin-top: 60px;
+}
+
+.item1 {
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    /* Animation properties */
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.item1 h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.imge {
+    width: 280px;
+    border-radius: 50%;
+}
+
+.item2 {
+    padding: 20px;
+    /* background-color: blue; */
+    /* Animation properties */
+    transform: translateY(-100%);
+    animation: middlein 1s ease-in-out forwards;
+}
+
+@keyframes middlein {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.heading h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    border-left: 8px solid orange;
+    padding-left: 20px;
+}
+
+.about {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #fff;
+    word-spacing: 2px;
+    line-height: 1.2;
+    text-align: justify;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 1px;
+}
+
+.resume {
+    background-color: #ff00f7;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 170px;
+    height: 50px;
+    border-radius: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.resume:hover {
+    background-color: rgb(174, 0, 255);
+    scale: 1.1;
+}
+
+::selection {
+    background-color: rgb(18, 54, 54);
+}
+
+/* Default styles for desktop */
+.item3 {
+    padding: 20px;
+    transform: translateX(100%);
+    animation: lastin 1s ease-in-out forwards;
+}
+
+/* Default animation for desktop */
+@keyframes lastin {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Styles for mobile */
+@media (max-width: 768px) {
+    .item3 {
+        padding: 20px;
+        opacity: 0;
+    }
+
+    /* Animation for mobile */
+    .item3animate {
+        animation: lastin2 1s ease-in-out forwards;
+    }
+
+    /* Mobile animation */
+    @keyframes lastin2 {
+        from {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+
+@media (max-width: 780px) {
+    .item3 {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 530px) {
+    .item3 {
+        grid-column: auto;
+    }
+}
+
+.bio {
+    display: grid;
+    grid-template-columns: 33.33% 66.67%;
+    /* grid-template-rows: repeat(5, 1fr); */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.biocontent {
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: justify;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+@media only screen and (max-width: 600px) {
+    .biocontent {
+        font-size: 18px;
+        /* Adjust the font size for smaller screens */
+        line-height: 1.2;
+        /* Adjust the line height for smaller screens */
+        letter-spacing: 0;
+    }
+}
+
+.item:hover {
+    background-color: #171616;
+}
+
+
+.gridskills {
+    width: 100%;
+    height: 60%;
+    /* background-color: #ffffff; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25em), 1fr));
+
+    /* column-gap: 50px; */
+    justify-items: space-around;
+    gap: 10px;
+    padding: 20px;
+}
+
+.skillitem1 {
+    /* background-color: rgb(236, 40, 40); */
+    grid-area: 1/1/3/3;
+    padding: 20px;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(min(100%, 25em), 1fr)); */
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 30px;
+    height: 100%;
+}
+
+.skill:hover {
+    background-color: #171616;
+}
+
+.skillitem2 {
+    /* background-color: rgb(66, 40, 236); */
+    grid-area: 1/5/3/5;
+    padding: 20px;
+    transform: translateY(100%);
+    animation: educat 1s ease-in-out forwards;
+}
+
+@keyframes educat {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .gridskills {
+        grid-template-columns: 1fr;
+        /* Set to a single column for smaller screens */
+    }
+
+    .skillitem2 {
+        grid-area: 3/1/4/1;
+        /* Move skillitem2 to a new row */
+    }
+}
+
+.skillitem3 {
+    /* background-color: rgb(122, 236, 40); */
+    /* grid-area: 2/1/2/2; */
+    height: 70px;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+    .skillitem3 {
+        /* background-color: rgb(122, 236, 40); */
+        /* grid-area: 2/1/2/2; */
+        height: 70px;
+    }
+
+    .skillitem3animate {
+        animation: slideIn2 1s ease-in-out forwards;
+    }
+
+    @keyframes slideIn2 {
+        from {
+            transform: translateX(-100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+.skillitem3:hover {
+    background-color: #30162c;
+}
+
+.sk {
+    grid-area: 1/1/2/3;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.skillitem4 {
+    /* background-color: rgb(40, 226, 236); */
+    /* grid-area: 2/2/2/3; */
+    height: 70px;
+    transform: translateX(100%);
+    animation: skillmiddle 1s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+    .skillitem4 {
+        /* background-color: rgb(122, 236, 40); */
+        /* grid-area: 2/1/2/2; */
+        height: 70px;
+        transform: translateX(100%);
+    }
+
+    .skillitem4animate {
+        animation: skillmiddle12 1s ease-in-out forwards;
+    }
+
+    @keyframes skillmiddle12 {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@keyframes skillmiddle {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.skillitem4:hover {
+    background-color: rgb(54, 40, 25);
+}
+
+@media (max-width: 768px) {
+    .skillitem1 {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 25em), 1fr));
+    }
+
+    .skillitem3,
+    .skillitem4 {
+        grid-column: span 2;
+        /* Reset the column span for smaller screens */
+        /* Adjust other styles as needed for smaller screens */
+    }
+}
+
+@media (max-width: 927px) {
+    .skillitem2 {
+        grid-row: 3;
+        grid-column: 1/3;
+    }
+}
+
+.skills-section {
+    display: grid;
+    gap: 20px;
+}
+
+.skill1 {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.skname {
+    margin-top: 0;
+    color: #40f200;
+}
+
+.skill-range {
+    width: 100%;
+    /* Adjust as needed */
+    margin-top: 10px;
+    cursor: default;
+}
+
+
+.education-details {
+    margin-top: 20px;
+    color: #fff;
+    padding: 20px;
+    height: 85%;
+    text-align: center;
+    overflow: hidden;
+    width: fit-content;
+}
+
+@media (max-width: 530px) {
+    .education-details {
+        padding: 0;
+    }
+}
+
+.ed {
+    background-color: #30162c;
+}
+
+.education-details h3 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 27px;
+    border-left: 8px solid rgb(255, 0, 234);
+    width: fit-content;
+    margin: 0 auto;
+    padding-left: 18px;
+}
+
+.education-details hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    height: 1px;
+    background-color: #0eacb7;
+}
+
+
+/* Below COde is for carasole education */
+.mySlides {
+    display: none;
+    transition: all 1s ease-in-out;
+}
+
+.slideshow-container {
+    /* max-width: 1000px; */
+    width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    background-color: #333131;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s ease-in-out;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    margin-left: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot,
+.dots {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin-top: 30px;
+    margin-left: 2px;
+    background-color: #fff2f2;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2.0s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.sld {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Above COde is for carasole education */
+
+
+
+
+
+
+.gridcertificates {
+    width: 100%;
+    height: 100%;
+    /* background-color: #ffffff; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
+    /* grid-template-rows: 1; */
+    gap: 10px;
+    /* justify-content: space-around; */
+    padding: 20px;
+}
+
+.citem1 {
+    /* background-color: rgb(236, 40, 40); */
+    grid-area: 1/1/2/3;
+    padding: 20px;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    transform: rotateY(90deg);
+    /* animation: rotatecertificate 1s ease-in-out forwards; */
+}
+
+.citem1animate {
+    animation: rotatecertificate 1s ease-in-out forwards;
+}
+
+@keyframes rotatecertificate {
+    from {
+        transform: rotateY(90deg);
+    }
+
+    to {
+        transform: rotateY(0);
+    }
+}
+
+
+
+.citem2 {
+    padding: 20px;
+    height: 100%;
+    opacity: 0;
+    /* animation: radialAnimation 1.5s linear;    */
+}
+
+.citem2animate {
+    animation: radialAnimation 0.8s linear forwards;
+}
+
+@keyframes radialAnimation {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.citem3 {
+    /* background-color: rgb(236, 40, 40); */
+    /* grid-area: 1/4/2/5; */
+    padding: 20px;
+    height: 100%;
+    opacity: 0;
+    /* animation: radialAnimation 1.5s linear; */
+}
+
+.citem3animate {
+    animation: radialAnimation 0.8s linear forwards;
+}
+
+.certificates:hover {
+    background-color: #171616;
+}
+
+
+.custom-carousel-container {
+    position: relative;
+    width: 90%;
+    margin: 7% auto;
+    overflow: hidden;
+}
+
+.custom-carousel {
+    margin-top: 30px;
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.custom-slide {
+    flex: 0 0 calc(50% - 10px);
+    box-sizing: border-box;
+    margin-right: 15px;
+    /* Gap between images */
+}
+
+.custom-slide:last-child {
+    margin-right: 0;
+    /* Remove gap for the last image */
+}
+
+.custom-slide img {
+    /* width: 290px;
+    height: 190px; */
+    width: 95%;
+    height: 90%;
+}
+
+.custom-prev-button,
+.custom-next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-prev-button {
+    left: 10px;
+}
+
+.custom-next-button {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .citem1 {
+        /* background-color: rgb(236, 40, 40); */
+        grid-area: 1/1/2/2;
+    }
+
+    .custom-slide {
+        flex: 0 0 100%;
+        /* Full width for mobile devices */
+        margin-right: 0;
+        /* No gap for mobile devices */
+    }
+}
+
+
+.soft-skills-container {
+    /* margin-left: 28%; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.Languages {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.soft-skill {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Offcanvas Drawer Styles */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    /* Offcanvas initially hidden off-screen */
+    width: 300px;
+    height: 100%;
+    /* background-color: #007BFF; */
+    background-color: #E6E6FA;
+    transition: right 0.3s ease-in-out;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .offcanvas {
+        .offcanvas {
+            right: -340px;
+            width: 80%;
+        }
+    }
+}
+
+.offcanvas a {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    cursor: pointer;
+}
+
+.offcanvas a:hover {
+    background-color: #9ba2a4;
+}
+
+.menu-toggle {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* @media (max-width: 768px) {
+    .offcanvas {
+        right: -340px;
+        width: 80%;
+    }
+} */
+
+
+#languages.active,
+#SoftSkills.active,
+#Certificate.active,
+#Education.active,
+#SKILLS.active,
+#BIO.active,
+#ABOUT.active {
+    background-color: #171616;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.modal-content {
+    width: 70%;
+    height: 80%;
+    margin: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 75px;
+    right: 200px;
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        height: 30%;
+        margin-top: 60%;
+    }
+    .close-modal {
+        font-size: 50px;
+        top: 280px;
+        right: 50px;
+    }
+}
+
+
