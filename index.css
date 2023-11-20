@@ -824,12 +824,12 @@ body {
 @media (max-width: 768px) {
     .modal-content {
         width: 90%;
-        height: 30%;
-        margin-top: 60%;
+        height: 35%;
+        margin-top: 50%;
     }
     .close-modal {
         font-size: 50px;
-        top: 280px;
+        top: 210px;
         right: 50px;
     }
 }
